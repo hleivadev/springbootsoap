@@ -1,33 +1,64 @@
-HELP.md
+# Java
+*.class
+
+# Maven
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
+# Eclipse / IntelliJ / VSCode IDEs
+.idea/
 .project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+.classpath
+.settings/
 *.iml
 *.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+*.iws
 .vscode/
+bin/
+
+# OS (macOS) specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on external disk
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+
+# Spring Boot specific
+springbootsoap.iml
+
+# Logs
+*.log
+
+# Environment files
+.env
+*.env
+
+# Build generated files
+build/
+out/
+
+# Node / npm (por si más adelante usas algo de frontend)
+node_modules/
+dist/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Others
+*.swp

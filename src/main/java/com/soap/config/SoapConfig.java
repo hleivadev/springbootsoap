@@ -12,7 +12,15 @@ public class SoapConfig {
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-        marshaller.setContextPath("com.soap.wsdl");
+        marshaller.setClassesToBeBound(
+                com.soap.wsdl.Add.class,
+                com.soap.wsdl.AddResponse.class,
+                com.soap.wsdl.Subtract.class,
+                com.soap.wsdl.SubtractResponse.class,
+                com.soap.wsdl.Multiply.class,
+                com.soap.wsdl.MultiplyResponse.class,
+                com.soap.wsdl.Divide.class,
+                com.soap.wsdl.DivideResponse.class);
         return marshaller;
     }
 

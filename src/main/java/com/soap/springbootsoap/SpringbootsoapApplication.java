@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.soap.client.SoapClient;
-// import com.soap.wsdl.AddResponse;
+import com.soap.wsdl.AddResponse;
 
 @SpringBootApplication(scanBasePackages = {"com.soap.springbootsoap", "com.soap.client", "com.soap.config"})
 public class SpringbootsoapApplication {
@@ -18,13 +18,13 @@ public class SpringbootsoapApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootsoapApplication.class, args);
 	}
-	// @Bean
-	// CommandLineRunner init(SoapClient soapClient){
-	// 	// return args -> {
-	// 	// 	AddResponse addResponse = soapClient.getAddResponse(2, 2);
-	// 	// 	LOOGER.info("El resultado de la suma de los numeros  {} y {} es {}", 2 , 2 ,addResponse.getAddResult() );
-	// 	// };
+	@Bean
+	CommandLineRunner init(SoapClient soapClient){
+		return args -> {
+			AddResponse addResponse = soapClient.getAddResponse(2, 2);
+			LOOGER.info("El resultado de la suma de los numeros  {} y {} es {}", 2 , 2 ,addResponse.getAddResult() );
+		};
 
-	// }
+	}
 
 }
